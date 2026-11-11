@@ -1,0 +1,76 @@
+{
+  "models": {
+    "baseline": {
+      "dice": 0.8841210515332876,
+      "iou": 0.810995441357971,
+      "boundary_f1": 0.5905046864984407,
+      "best_epoch": 20,
+      "validation_dice": 0.8862407207489014
+    },
+    "boundary_weighted": {
+      "dice": 0.8867642439626674,
+      "iou": 0.8145297130113971,
+      "boundary_f1": 0.6010677656919584,
+      "best_epoch": 20,
+      "validation_dice": 0.8896663188934326
+    }
+  },
+  "paired_changes": {
+    "dice": {
+      "mean": 0.0026431924293790054,
+      "ci95": [
+        0.0006241252416944676,
+        0.004764922305031176
+      ],
+      "better": 204,
+      "worse": 174
+    },
+    "iou": {
+      "mean": 0.0035342716534258016,
+      "ci95": [
+        0.0006723191508103651,
+        0.006471101502724433
+      ],
+      "better": 204,
+      "worse": 174
+    },
+    "boundary_f1": {
+      "mean": 0.010563079193517776,
+      "ci95": [
+        0.00291826631275504,
+        0.018109438132626658
+      ],
+      "better": 206,
+      "worse": 159
+    }
+  },
+  "training_seconds": {
+    "baseline": 247.81,
+    "boundary_weighted": 258.06
+  },
+  "parameters_per_model": 67569,
+  "seed": 42,
+  "batch": 12,
+  "threads": 4,
+  "exact_training_duplicates_removed": [
+    {
+      "removed_training_id": "ISIC_0000280",
+      "matching_test_id": "ISIC_0000279"
+    },
+    {
+      "removed_training_id": "ISIC_0001184",
+      "matching_test_id": "ISIC_0001484"
+    },
+    {
+      "removed_training_id": "ISIC_0001385",
+      "matching_test_id": "ISIC_0001685"
+    }
+  ],
+  "python": "3.12.14",
+  "torch": "2.6.0+cpu",
+  "split_sizes": {
+    "train": 807,
+    "validation": 90,
+    "test": 379
+  }
+}
